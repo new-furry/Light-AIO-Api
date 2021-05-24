@@ -44,7 +44,12 @@ app.get('/login', async (req, res) => {
             authData = {
                 authenticated: true,
                 email: result.data.email,
-                key: result.data.key
+                key: result.data.key,
+                type: result.data.plan.type,
+                discord: result.data.user.discord,
+                twitter: result.data.user.twitter,
+                username: result.data.user.username,
+                avatar: result.data.user.photo_url
             }
         } else {
             authData = {
