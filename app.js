@@ -49,7 +49,8 @@ app.get('/login', async (req, res) => {
                 discord: result.data.user.discord,
                 twitter: result.data.user.twitter,
                 username: result.data.user.username,
-                avatar: result.data.user.photo_url
+                avatar: result.data.user.photo_url,
+                expire_date: result.data.cancel_at
             }
         } else {
             authData = {
