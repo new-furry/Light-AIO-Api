@@ -46,10 +46,10 @@ app.get('/login', async (req, res) => {
                 email: result.data.email,
                 key: result.data.key,
                 type: result.data.plan.type,
-                discord: result.data.user.discord,
-                twitter: result.data.user.twitter,
-                username: result.data.user.username,
-                avatar: result.data.user.photo_url,
+                discord: result.data.user ? result.data.user.discord : {},
+                twitter: result.data.user ? result.data.user.twitter : {},
+                username: result.data.user ? result.data.user.username : {},
+                avatar: result.data.user ? result.data.user.photo_url : {},
                 expire_date: result.data.cancel_at
             }
         } else {
